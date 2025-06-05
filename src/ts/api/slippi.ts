@@ -48,7 +48,7 @@ export async function getPlayersById(ids: string[]): Promise<DatabasePlayerData[
         variables["i" + i] = ids[i];
     }
 
-    const response = await fetch("https://gql-gateway-dot-slippi.uc.r.appspot.com/graphql", {
+    const response = await fetch("https://internal.slippi.gg/graphql", {
         "headers": {
             "Cache-Control": "no-cache",
             "Content-Type": "application/json"
