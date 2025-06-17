@@ -9,7 +9,7 @@ import get_id_by_code from "$gql/GetIdByCode.gql?raw";
 export async function getIdByCode(code: string): Promise<string | null> {
     await slippiLimiter.removeTokens(1);
 
-    const response = await fetch("https://gql-gateway-dot-slippi.uc.r.appspot.com/graphql", {
+    const response = await fetch("https://internal.slippi.gg/graphql", {
         "headers": {
             "Cache-Control": "no-cache",
             "Content-Type": "application/json"
