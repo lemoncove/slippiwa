@@ -26,11 +26,11 @@ export async function getIdByCode(code: string): Promise<string | null> {
 
     const data = (await response.json()).data;
 
-    if (!data.getConnectCode) {
+    if (!data.getUser) {
         return null;
     }
 
-    return data.getConnectCode.user.fbUid;
+    return data.getUser.fbUid;
 }
 
 // horrible batching mechanism

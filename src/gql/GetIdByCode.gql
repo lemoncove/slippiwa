@@ -1,7 +1,5 @@
 query GetIdByCode($code: String!) {
-  getConnectCode(code: $code) {
-    user {
-      fbUid
-    }
+  getUser(connectCode: $code) {
+    fbUid
   }
 }
